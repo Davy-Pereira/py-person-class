@@ -1,4 +1,6 @@
 class Person:
+    people = {}
+
     def __init__(self, name: str, age: int) -> None:
         self.name = name
         self.age = age
@@ -13,5 +15,4 @@ def create_person_list(people: list) -> list:
             person.wife = Person.people[person_data["name"]]
         if person_data.get("husband"):
             person.husband = Person.people[person_data["husband"]]
-
     return n_list
